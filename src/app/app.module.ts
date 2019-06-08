@@ -5,14 +5,12 @@ import {FormsModule} from '@angular/forms' ;
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { ComponentAreaEquilatero } from './componentes/triangulo-equilatero/component.equilatero';
-import { ComponentAreaQuadrado } from './componentes/quadrado/component.quadrado';
-import { ComponentAreaIsoceles } from './componentes/triangulo-isoceles/component.isoceles';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent,ComponentAreaEquilatero,ComponentAreaQuadrado,ComponentAreaIsoceles],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule],
   providers: [
