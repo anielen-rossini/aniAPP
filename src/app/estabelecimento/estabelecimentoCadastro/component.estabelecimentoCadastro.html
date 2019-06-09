@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cadastro de Estabelecimeno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Novo Estabelecimento: </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-subtitle> Dados de Loja: </ion-card-subtitle>
+      <br>
+      Nome do Dono: <ion-input placeholder=" EXEMPLO: Ana Clara " [(ngModel)]='estabelecimento.nome'> </ion-input>
+      <br>
+      Sobrenome do Dono: <ion-input placeholder=" EXEMPLO: Marinho " [(ngModel)]='estabelecimento.sobrenome'> </ion-input>
+      <br>
+      CPF(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 10514795022" [(ngModel)]='estabelecimento.cpf'> </ion-input>
+      <br>
+      Nome da Loja: <ion-input placeholder=" EXEMPLO: Pão " [(ngModel)]='estabelecimento.lojanome'> </ion-input>
+      <br>
+      CNPJ(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 10514795022" [(ngModel)]='estabelecimento.cnpj'> </ion-input>
+      <br>
+      Endereço da Loja: <ion-input placeholder=" EXEMPLO: Rua Plamares" [(ngModel)]='estabelecimento.end'> </ion-input>
+      <br>
+      Numero(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 598" [(ngModel)]='estabelecimento.nloja'> </ion-input>
+      <br>
+      Bairro <ion-input placeholder=" EXEMPLO: Jd Maria" [(ngModel)]='estabelecimento.bairro'> </ion-input>
+      <br>
+	</ion-card-content>
+ </ion-card>	
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Dados de Conta
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Email:
+      <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='estabelecimento.lEmail'> </ion-input>
+      Senha:
+      <ion-input type="password" [(ngModel)]='estabelecimento.lSenha'> </ion-input>
+      Confirmar Senha:
+      <ion-input type="password" [(ngModel)]='estabelecimento.lcSenha'> </ion-input>
+      <br>
+      <ion-button expand="full" color="success" href="cardapioCad"> CADASTRAR </ion-button>
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>

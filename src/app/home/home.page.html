@@ -20,17 +20,33 @@
       		Senha:
       		<ion-input [(ngModel)]='cedc' type="password"> </ion-input>
       		<br>
-      		<ion-button href='home'> Entrar </ion-button>
+      		<ion-button href='entrar'> Entrar </ion-button>
     	</ion-card-content>
 	</ion-card>
-	    	
+	    	<br>
+	    	<ion-card>
+   	 	<ion-card-header>
+      		<ion-card-title> Login Estabelecimento</ion-card-title>
+
+    	</ion-card-header>	
+    	<ion-card-content>
+      		Email:
+      		<ion-input [(ngModel)]='f5'> </ion-input>
+      		<br>
+      		Senha:
+      		<ion-input [(ngModel)]='cedc' type="password"> </ion-input>
+      		<br>
+      		<ion-button href='estabEntrar'> Entrar </ion-button>
+    	</ion-card-content>
+	</ion-card>
+	    	<br>
     	<ion-card>
     		<ion-card-header>
       			<ion-card-title> Cadastre-se: </ion-card-title>
    			</ion-card-header>
     		<ion-card-content>
-     			<ion-button href='home'> Cadastro Estabelecimento </ion-button>
-     			<ion-button href='home'> Cadastro Cliente </ion-button>
+     			<ion-button href='estabCad'> Cadastro Estabelecimento </ion-button>
+     			<ion-button href='cliEntrar'> Cadastro Cliente </ion-button>
     		</ion-card-content>
   
 </ion-card>

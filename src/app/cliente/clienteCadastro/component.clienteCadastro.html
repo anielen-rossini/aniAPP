@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cadastro de Cliente
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Novo Cliente: </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card-subtitle> Dados Pessoais: </ion-card-subtitle>
+      <br>
+      Nome: <ion-input placeholder=" EXEMPLO: Ana Clara " [(ngModel)]='cliente.nome'> </ion-input>
+      <br>
+      Sobrenome: <ion-input placeholder=" EXEMPLO: Marinho " [(ngModel)]='cliente.sobrenome'> </ion-input>
+      <br>
+      CPF(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 10514795022" [(ngModel)]='cliente.cpf'> </ion-input>
+      <br>
+      Endereço: <ion-input placeholder=" EXEMPLO: Rua Plamares" [(ngModel)]='cliente.end'> </ion-input>
+      <br>
+      Numero(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 598" [(ngModel)]='cliente.ncasa'> </ion-input>
+      <br>
+      Bairro <ion-input placeholder=" EXEMPLO: Jd Maria" [(ngModel)]='cliente.bairro'> </ion-input>
+      <br>
+	</ion-card-content>
+ </ion-card>	
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Dados de Conta
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Email:
+      <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='cliente.nEmail'> </ion-input>
+      Senha:
+      <ion-input type="password" [(ngModel)]='cliente.nSenha'> </ion-input>
+      Confirmar Senha:
+      <ion-input type="password" [(ngModel)]='cliente.cSenha'> </ion-input>
+      <br>
+      <ion-button expand="full" color="success" href="entrar"> CADASTRAR </ion-button>
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
