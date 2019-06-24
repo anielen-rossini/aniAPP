@@ -1,13 +1,13 @@
 export class Estabelecimento {
-nome : String;
-sobrenome : String;
+nome : string;
+sobrenome : string;
 cpf : Number;
-lojanome : String;
+lojanome : string;
 cnpj : Number;
-end : String;
-nloja : String;
-bairro : String;
-lemail : String;
-lSenha : String;
-lcSenha : String;
+end : string;
+nloja : string;
+bairro : string;
+lemail : string;
+lSenha : string;
+lcSenha : string;
 }
