@@ -13,18 +13,21 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from "@angular/fire"
 import { AngularFireDatabaseModule } from "@angular/fire/database"
-import { ComponenteClienteCadastrado } from './cliente/clienteCadastrado/component.clienteCadastrado';
+
+
+
 import { ClienteSalvarComponent } from './cliente/cliente-salvar/cliente-salvar.component';
-import { ComponenteEstabelecimentoCadastrado } from './estabelecimento/estabelecimentoCadastrado/component.estabelecimentoCadastrado';
 import { EstabelecimentoSalvarComponent } from './estabelecimento/estabelecimento-salvar/estabelecimento-salvar.component';
 import { CardapioSalvarComponent } from './cardapio/cardapio-salvar/cardapio-salvar.component';
-import { ComponenteCardapioVizu } from './cardapio/cardapioVizu/component.cardapioVizu';
 import { PedidoSalvarComponent } from './pedido/pedido-salvar/pedido-salvar.component';
 import { ComponenteAcompanhar } from './pedido/acompanharPedido/component.acompanhar';
+import { CardapioListarComponent } from './cardapio/cardapio-listar/cardapio-listar.component';
+import { EstabelecimentoListarComponent } from './estabelecimento/estabelecimento-listar/estabelecimento-listar.component';
+import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ComponenteClienteCadastrado, ClienteSalvarComponent, ComponenteEstabelecimentoCadastrado, EstabelecimentoSalvarComponent, CardapioSalvarComponent, ComponenteCardapioVizu, PedidoSalvarComponent, ComponenteAcompanhar ],
+  declarations: [AppComponent, ClienteSalvarComponent,  EstabelecimentoSalvarComponent, CardapioSalvarComponent, PedidoSalvarComponent, ComponenteAcompanhar,CardapioListarComponent,EstabelecimentoListarComponent, PedidoListarComponent ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyDU6bjYzqm7e0l6qst1m7Cybr6Au55-FXI",
