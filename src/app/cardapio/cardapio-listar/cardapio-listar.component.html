@@ -6,30 +6,45 @@
 
 <ion-content>
 
-	<ion-card>
-    <ion-card-header>
-      <ion-card-title> Restaurante e Pizzaria da Ani </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-       Pizzas Tamanho: P, M , G , GG
-       <br>
-       Valores: P = 10,00 / M = 15,00 / G = 30,00 / GG = 50,00
-      <br>
-      Sabores:
-      <br>
-      Frango Com Catupiry
-      <br>
-      Calabresa
-      <br>
-      Bacon
-      <br>
-      <ion-button color="danger" href='makePedido'> Criar Pedido </ion-button>
-    </ion-card-content>
+	<ion-card *ngFor="let cardapio of listaCardapio | async">
+    	<ion-card-header>
+      		<ion-card-title> Itens e Valores: </ion-card-title>
+    	</ion-card-header>
+    	
+       	<ion-card-content>
+			<ion-list>
+				<ion-item>
+					Item:
+					<ion-label><h2><b>  {{ cardapio.item }}  </b> </h2></ion-label>
+					</ion-item>
+					
+					<ion-item>
+					<ion-label>Tamanhos: <br> {{ cardapio.tamanho }}  </ion-label>
+				</ion-item>
+				
+				<ion-item>
+					<ion-label> Valores:<br>  {{ cardapio.valor }}  </ion-label>
+				</ion-item>
+				
+				<ion-item>
+					<ion-label> Sabores:<br> {{ cardapio.sabor }} </ion-label>
+				</ion-item>
+				
+			</ion-list>
+			<br>
+      		<ion-button color="danger" href='makePedido'> Criar Pedido </ion-button>
+    	</ion-card-content>
   </ion-card>
+  		<ion-button href='establista'> Voltar </ion-button>
+  		<br>
+  		<br>
+  		<br>
+  		
+  
 
 </ion-content>
 
 <ion-footer>
-
+  	
 
 </ion-footer>
