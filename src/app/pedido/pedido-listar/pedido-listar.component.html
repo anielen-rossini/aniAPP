@@ -5,47 +5,40 @@
 </ion-header>
 
 <ion-content>
-	<ion-card color="tertiary">
+	<ion-card *ngFor="let pedido of listaPedido | async">
     <ion-card-header>
-      <ion-card-title> Pedido 5894785: </ion-card-title>
+      <ion-card-title> Pedido: ?????????</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
       <ion-card-subtitle> Dados: </ion-card-subtitle>
       <br>
-      Nome: Marai Santos de Rosa
+      Nome: {{ pedido.nome }} 
       <br>
-      Endereço: Rua Mario Jorge, 597, Jd If
+      Endereço: {{ pedido.endereco}}
       <br>
-      CPF(Apenas Numeros): 58745678952
+      CPF(Apenas Numeros): {{ pedido.cpf }}
       <br>
-      Telefone: 44 999854589
+      Telefone: {{ pedido.tel }}
       <br>
-       2 Pizza GG FRANGO; CALABRESA
+      Quantidade: {{ pedido.qnt}}
       <br>
-      TOTAL R$ 50,00
+      Tamanho: {{ pedido.tmn }}
       <br>
-      FORMA DE PAGAMENTO: DINHEIRO
+      Sabor: ????????? 
+      <br>
+      TOTAL R$ ?????
+      <br>
+      FORMA DE PAGAMENTO: ????
       <br>
 
-      <ion-list>
-        <ion-item>
-          <ion-label> Estado do Pedido: </ion-label>
-          <ion-select>
-            <ion-select-option value="emespera"> Em Espera </ion-select-option>
-            <ion-select-option value="preparo"> Preparo </ion-select-option>
-            <ion-select-option value="saiu"> Saiu para Entrega </ion-select-option>
-            <ion-select-option value="entregue"> Entregue </ion-select-option>
-         </ion-select>
-        </ion-item>
-      </ion-list>
 
-     <ion-button expand="full" color="success" href="estabEntrar"> Salvar Alterção </ion-button>
+     <ion-button expand="full" color="success" (click)="saida()" href="pedidolista"> Saiu para Entrega </ion-button>
 
     </ion-card-content>
 
   </ion-card>
-
+	<ion-button href="home"> Sair </ion-button>
 </ion-content>
 
 <ion-footer>

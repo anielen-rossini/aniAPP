@@ -20,11 +20,18 @@
         <ion-item>
           <ion-label> ITEM: </ion-label>
           <ion-select>
-            <ion-select-option value="PIZZA"> PIZZA </ion-select-option>            
+            <ion-select-option value="1"> Pizza </ion-select-option>            
          </ion-select>
         </ion-item>
-      </ion-list>    
-      
+      </ion-list> 
+      <br>      
+      TAMANHO:
+      <ion-input [(ngModel)]='pedido.tmn'> </ion-input>   
+    <br>  
+	<br>      
+      QUANTIDADE:
+      <ion-input [(ngModel)]='pedido.qnt'> </ion-input>   
+    <br>  
     SABORES(P=1s; M=2s; G=3; GG=3;):
     <br>
 	<ion-checkbox color="primary">  </ion-checkbox> Frango
@@ -53,11 +60,17 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>
-        Endereço
+        Informações do Destino
       </ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
+      Nome:
+      <ion-input placeholder=" EXEMPLO: José" [(ngModel)]='pedido.nome'> </ion-input>
+      <br>
+      Cpf:
+      <ion-input placeholder=" EXEMPLO: 1254789653" [(ngModel)]='pedido.cpf'> </ion-input>
+      <br>
       Telefone:
       <ion-input placeholder=" EXEMPLO: 9998565456" [(ngModel)]='pedido.tel'> </ion-input>
       Endereço:
@@ -70,12 +83,13 @@
 
   </ion-card>
   
-     <br>
-     Pedido: <br>
-     Pizza GG frango 
-     Total ............... 50,00
   	<br>
   <ion-button expand="full" (click)='pedidoS()' color="danger" href='cope'> Confirmar Pedido </ion-button>
+  	<br>
+  	<br>
+  	<ion-button expand="full" href='establista'> Confirmar Voltar a Restaurantes </ion-button>
+  	<br>
+  	<br>
 
 </ion-content>
 

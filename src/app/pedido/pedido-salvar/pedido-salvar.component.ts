@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pedido } from '../entidade/pedido';
 import { AngularFireDatabase } from '@angular/fire/database';
 
+
 @Component({
   selector: 'app-pedido-salvar',
   templateUrl: './pedido-salvar.component.html',

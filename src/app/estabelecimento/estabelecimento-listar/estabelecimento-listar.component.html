@@ -12,19 +12,14 @@
 		<ion-card-content>
 			<ion-list>
 				<ion-item>
-					<ion-label>{{ estabelecimento.lojanome }}</ion-label>
+					<ion-label><h2><b><u> {{ estabelecimento.lojanome }} </u></b> </h2></ion-label>
 					</ion-item>
 					<ion-item>
-					<ion-label>{{ estabelecimento.end }}</ion-label>
+					<ion-label>Endereço: <br> {{ estabelecimento.end }},<br> n° {{ estabelecimento.nloja }},<br> {{ estabelecimento.bairro }} </ion-label>
 				</ion-item>
 				<ion-item>
-					<ion-label>{{ estabelecimento.nloja }}</ion-label>
-				</ion-item>
-					<ion-item>
-					<ion-label>{{ estabelecimento.bairro }}</ion-label>
-				</ion-item>
-				<ion-item>
-					<ion-label>{{ estabelecimento.cnpj }}</ion-label>
+					CNPJ:
+					<ion-label>  {{ estabelecimento.cnpj }}  </ion-label>
 				</ion-item>
 
 			</ion-list>
@@ -33,6 +28,8 @@
 		</ion-card-content>
 
 	</ion-card>
+	
+	<ion-button  expand = 'full' href='home'> Sair </ion-button>
 
 </ion-content>
 
