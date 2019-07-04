@@ -11,18 +11,18 @@ import { map } from 'rxjs/operators';
 })
 export class EstabelecimentoListarComponent implements OnInit {
 
-  listaEstabelecimento : Observable<Estabelecimento[]>;
+  listaEstabelecimento: Observable<Estabelecimento[]>;
 
 
   constructor(private fire: AngularFireDatabase) {
-   this.listaEstabelecimento = this.fire.list<Estabelecimento>('estabelecimento')
-   .snapshotChanges().pipe(
-     map( lista => lista.map( linha =>({
-       key: linha.payload.key, ... linha.payload.val()
-     }) ) )
-    );
+    this.listaEstabelecimento = this.fire.list<Estabelecimento>('estabelecimento')
+      .snapshotChanges().pipe(
+        map(lista => lista.map(linha => ({
+          key: linha.payload.key, ...linha.payload.val()
+        })))
+      );
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

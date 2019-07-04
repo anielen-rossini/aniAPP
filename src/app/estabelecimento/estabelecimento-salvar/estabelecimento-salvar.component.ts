@@ -9,13 +9,13 @@ import { AngularFireDatabase } from '@angular/fire/database';
   styleUrls: ['./estabelecimento-salvar.component.scss'],
 })
 export class EstabelecimentoSalvarComponent implements OnInit {
-  estabelecimento : Estabelecimento = new Estabelecimento();
+  estabelecimento: Estabelecimento = new Estabelecimento();
 
   constructor(private banco: AngularFireDatabase) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  estabelecimentoS(){
+  estabelecimentoS() {
     this.banco.list('estabelecimento').push(this.estabelecimento);
     this.estabelecimento = new Estabelecimento();
     alert("Loja Salva");
