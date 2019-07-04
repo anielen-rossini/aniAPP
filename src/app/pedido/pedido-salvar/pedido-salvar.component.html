@@ -8,7 +8,7 @@
 
 <ion-content>
 
-  
+
 
   <ion-card>
     <ion-card-header>
@@ -16,46 +16,46 @@
     </ion-card-header>
 
     <ion-card-content>
-		<ion-list>
+      <ion-list>
         <ion-item>
           <ion-label> ITEM: </ion-label>
           <ion-select>
-            <ion-select-option value="1"> Pizza </ion-select-option>            
-         </ion-select>
+            <ion-select-option value="1"> Pizza </ion-select-option>
+          </ion-select>
         </ion-item>
-      </ion-list> 
-      <br>      
-      TAMANHO:
-      <ion-input [(ngModel)]='pedido.tmn'> </ion-input>   
-    <br>  
-	<br>      
-      QUANTIDADE:
-      <ion-input [(ngModel)]='pedido.qnt'> </ion-input>   
-    <br>  
-    SABORES(P=1s; M=2s; G=3; GG=3;):
-    <br>
-	<ion-checkbox color="primary">  </ion-checkbox> Frango
-	<br>
-	<ion-checkbox color="secondary">  </ion-checkbox> Frango c/ Catupiry
-	<br>
-	<ion-checkbox color="danger">  </ion-checkbox> Calabresa
+      </ion-list>
       <br>
-      
-       
-		<ion-list>
+      TAMANHO:
+      <ion-input [(ngModel)]='pedido.tmn'> </ion-input>
+      <br>
+      <br>
+      QUANTIDADE:
+      <ion-input [(ngModel)]='pedido.qnt'> </ion-input>
+      <br>
+      SABORES(P=1s; M=2s; G=3; GG=3;):
+      <br>
+      <ion-checkbox color="primary"> </ion-checkbox> Frango
+      <br>
+      <ion-checkbox color="secondary"> </ion-checkbox> Frango c/ Catupiry
+      <br>
+      <ion-checkbox color="danger"> </ion-checkbox> Calabresa
+      <br>
+
+
+      <ion-list>
         <ion-item>
           <ion-label> PAGAMENTO: </ion-label>
           <ion-select>
-            <ion-select-option value="din"> Dinheiro </ion-select-option> 
-            <ion-select-option value="cart"> Cartão </ion-select-option>            
-         </ion-select>
+            <ion-select-option value="din"> Dinheiro </ion-select-option>
+            <ion-select-option value="cart"> Cartão </ion-select-option>
+          </ion-select>
         </ion-item>
-      </ion-list>  
-        
-      
-      
-	</ion-card-content>
- </ion-card>	
+      </ion-list>
+
+
+
+    </ion-card-content>
+  </ion-card>
 
   <ion-card>
     <ion-card-header>
@@ -75,21 +75,21 @@
       <ion-input placeholder=" EXEMPLO: 9998565456" [(ngModel)]='pedido.tel'> </ion-input>
       Endereço:
       <ion-input [(ngModel)]='pedido.endereco'> </ion-input>
-     
+
 
 
     </ion-card-content>
 
 
   </ion-card>
-  
-  	<br>
+
+  <br>
   <ion-button expand="full" (click)='pedidoS()' color="danger" href='cope'> Confirmar Pedido </ion-button>
-  	<br>
-  	<br>
-  	<ion-button expand="full" href='establista'> Confirmar Voltar a Restaurantes </ion-button>
-  	<br>
-  	<br>
+  <br>
+  <br>
+  <ion-button expand="full" href='establista'> Confirmar Voltar a Restaurantes </ion-button>
+  <br>
+  <br>
 
 </ion-content>
 

@@ -6,38 +6,38 @@
 
 <ion-content>
 	<ion-card *ngFor="let pedido of listaPedido | async">
-    <ion-card-header>
-      <ion-card-title> Pedido: ?????????</ion-card-title>
-    </ion-card-header>
+		<ion-card-header>
+			<ion-card-title> Pedido: ?????????</ion-card-title>
+		</ion-card-header>
 
-    <ion-card-content>
-      <ion-card-subtitle> Dados: </ion-card-subtitle>
-      <br>
-      Nome: {{ pedido.nome }} 
-      <br>
-      Endereço: {{ pedido.endereco}}
-      <br>
-      CPF(Apenas Numeros): {{ pedido.cpf }}
-      <br>
-      Telefone: {{ pedido.tel }}
-      <br>
-      Quantidade: {{ pedido.qnt}}
-      <br>
-      Tamanho: {{ pedido.tmn }}
-      <br>
-      Sabor: ????????? 
-      <br>
-      TOTAL R$ ?????
-      <br>
-      FORMA DE PAGAMENTO: ????
-      <br>
+		<ion-card-content>
+			<ion-card-subtitle> Dados: </ion-card-subtitle>
+			<br>
+			Nome: {{ pedido.nome }}
+			<br>
+			Endereço: {{ pedido.endereco}}
+			<br>
+			CPF(Apenas Numeros): {{ pedido.cpf }}
+			<br>
+			Telefone: {{ pedido.tel }}
+			<br>
+			Quantidade: {{ pedido.qnt}}
+			<br>
+			Tamanho: {{ pedido.tmn }}
+			<br>
+			Sabor: ?????????
+			<br>
+			TOTAL R$ ?????
+			<br>
+			FORMA DE PAGAMENTO: ????
+			<br>
 
 
-     <ion-button expand="full" color="success" (click)="saida()" href="pedidolista"> Saiu para Entrega </ion-button>
+			<ion-button expand="full" color="success" (click)="saida()" href="pedidolista"> Saiu para Entrega </ion-button>
 
-    </ion-card-content>
+		</ion-card-content>
 
-  </ion-card>
+	</ion-card>
 	<ion-button href="home"> Sair </ion-button>
 </ion-content>
 

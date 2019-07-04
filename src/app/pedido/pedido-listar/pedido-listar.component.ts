@@ -12,21 +12,21 @@ import { map } from 'rxjs/operators';
 })
 export class PedidoListarComponent implements OnInit {
 
- listaPedido : Observable<Pedido[]>;
+  listaPedido: Observable<Pedido[]>;
 
   constructor(private fire: AngularFireDatabase) {
-   this.listaPedido = this.fire.list<Pedido>('pedido')
-   .snapshotChanges().pipe(
-     map( lista => lista.map( linha =>({
-       key: linha.payload.key, ... linha.payload.val()
-     }) ) )
-    );
+    this.listaPedido = this.fire.list<Pedido>('pedido')
+      .snapshotChanges().pipe(
+        map(lista => lista.map(linha => ({
+          key: linha.payload.key, ...linha.payload.val()
+        })))
+      );
   }
 
-  ngOnInit() {}
-  
-  saida(){
-   alert("Obrigado por avisar, A saida do produto foi salva");
+  ngOnInit() { }
+
+  saida() {
+    alert("Obrigado por avisar, A saida do produto foi salva");
   }
 
 }
