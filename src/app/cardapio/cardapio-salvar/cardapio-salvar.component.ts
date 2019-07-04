@@ -9,13 +9,13 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class CardapioSalvarComponent implements OnInit {
 
-  cardapio : Cardapio = new Cardapio();
+  cardapio: Cardapio = new Cardapio();
 
   constructor(private banco: AngularFireDatabase) { }
 
-  ngOnInit() {}
-  
-  cardapioS(){
+  ngOnInit() { }
+
+  cardapioS() {
     this.banco.list('cardapio').push(this.cardapio);
     this.cardapio = new Cardapio();
     alert("Itens Salvos");

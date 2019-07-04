@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
 
   { path: 'cliEntrar', component: ClienteSalvarComponent },
-  
+
   { path: 'estabCad', component: EstabelecimentoSalvarComponent },
   { path: 'cardapioCad', component: CardapioSalvarComponent },
 
@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'cope', component: ComponenteAcompanhar },
   { path: 'cardapiolista', component: CardapioListarComponent },
   { path: 'establista', component: EstabelecimentoListarComponent },
-  {path: 'pedidolista',  component: PedidoListarComponent },
+  { path: 'pedidolista', component: PedidoListarComponent },
 
 
 

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import {FormsModule} from '@angular/forms' ;
+import { FormsModule } from '@angular/forms';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -27,9 +27,9 @@ import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.comp
 
 
 @NgModule({
-  declarations: [AppComponent, ClienteSalvarComponent,  EstabelecimentoSalvarComponent, CardapioSalvarComponent, PedidoSalvarComponent, ComponenteAcompanhar,CardapioListarComponent,EstabelecimentoListarComponent, PedidoListarComponent ],
+  declarations: [AppComponent, ClienteSalvarComponent, EstabelecimentoSalvarComponent, CardapioSalvarComponent, PedidoSalvarComponent, ComponenteAcompanhar, CardapioListarComponent, EstabelecimentoListarComponent, PedidoListarComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule, AngularFireModule.initializeApp({
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyDU6bjYzqm7e0l6qst1m7Cybr6Au55-FXI",
     authDomain: "aniapp-40f42.firebaseapp.com",
     databaseURL: "https://aniapp-40f42.firebaseio.com",
@@ -37,7 +37,7 @@ import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.comp
     storageBucket: "aniapp-40f42.appspot.com",
     messagingSenderId: "938604848730",
     appId: "1:938604848730:web:59293448156c424f"
-  }), AngularFireDatabaseModule, ],
+  }), AngularFireDatabaseModule,],
   providers: [
     StatusBar,
     SplashScreen,
@@ -45,4 +45,4 @@ import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.comp
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -9,13 +9,13 @@ import { AngularFireDatabase } from '@angular/fire/database';
   styleUrls: ['./cliente-salvar.component.scss'],
 })
 export class ClienteSalvarComponent implements OnInit {
-  cliente :  Cliente = new Cliente();
+  cliente: Cliente = new Cliente();
 
   constructor(private banco: AngularFireDatabase) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  salvar(){
+  salvar() {
     this.banco.list('cliente').push(this.cliente);
     this.cliente = new Cliente();
     alert("Cadastrado");
