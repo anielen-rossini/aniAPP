@@ -5,7 +5,4 @@ cpf : Number;
 end : String;
 ncasa : Number;
 bairro : String;
-nEmail : String;
-nSenha : String;
-cSenha : String;
 }

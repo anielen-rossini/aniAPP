@@ -3,7 +3,8 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { Pedido } from '../entidade/pedido';
 import { map } from 'rxjs/operators';
-
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pedido-listar',
@@ -14,7 +15,7 @@ export class PedidoListarComponent implements OnInit {
 
   listaPedido: Observable<Pedido[]>;
 
-  constructor(private fire: AngularFireDatabase) {
+  constructor(private fire: AngularFireDatabase, private afAuth: AngularFireAuth, private router: Router ) {
     this.listaPedido = this.fire.list<Pedido>('pedido')
       .snapshotChanges().pipe(
         map(lista => lista.map(linha => ({
@@ -27,6 +28,13 @@ export class PedidoListarComponent implements OnInit {
 
   saida() {
     alert("Obrigado por avisar, A saida do produto foi salva");
+  }
+  
+  logout() {
+  
+    this.afAuth.auth.signOut();
+  
+    this.router.navigate(['home']);
   }
 
 }

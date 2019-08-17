@@ -46,11 +46,10 @@
 
     <ion-card-content>
       Email:
-      <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='estabelecimento.lEmail'> </ion-input>
+      <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='estab.email'> </ion-input>
       Senha:
-      <ion-input type="password" [(ngModel)]='estabelecimento.lSenha'> </ion-input>
-      Confirmar Senha:
-      <ion-input type="password" [(ngModel)]='estabelecimento.lcSenha'> </ion-input>
+      <ion-input type="password" [(ngModel)]='estab.senha'> </ion-input>
+      
       <br>
       <ion-button expand="full" color="success" (click)='estabelecimentoS()' href="cardapioCad"> CADASTRAR </ion-button>
 

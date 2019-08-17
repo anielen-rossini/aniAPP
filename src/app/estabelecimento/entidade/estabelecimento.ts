@@ -7,7 +7,5 @@ cnpj : Number;
 end : string;
 nloja : string;
 bairro : string;
-lemail : string;
-lSenha : string;
-lcSenha : string;
+
 }
