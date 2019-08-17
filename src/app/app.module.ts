@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { AngularFireAuth } from "angularfire2/auth";
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -39,6 +39,7 @@ import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.comp
     appId: "1:938604848730:web:59293448156c424f"
   }), AngularFireDatabaseModule,],
   providers: [
+	AngularFireAuth,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
