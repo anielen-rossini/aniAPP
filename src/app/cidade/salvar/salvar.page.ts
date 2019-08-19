@@ -12,12 +12,12 @@ import { Cidade } from '../entidade/cidade';
 export class SalvarPage implements OnInit {
   cidade: Cidade = new Cidade();
 
-  constructor(private fire:AngularFireDatabase, private rota:Router) { }
+  constructor(private fire: AngularFireDatabase, private rota: Router) { }
 
   ngOnInit() {
   }
 
-  salvar(){
+  salvar() {
     this.fire.list('cidade').push(this.cidade);
     this.cidade = new Cidade();
     this.rota.navigate(['estabCad']);

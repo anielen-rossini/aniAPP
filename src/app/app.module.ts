@@ -39,7 +39,7 @@ import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.comp
     appId: "1:938604848730:web:59293448156c424f"
   }), AngularFireDatabaseModule,],
   providers: [
-	AngularFireAuth,
+    AngularFireAuth,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

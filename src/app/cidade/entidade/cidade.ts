@@ -1,4 +1,4 @@
 export class Cidade {
-	nome: string;
-	estado: string;
+  nome: string;
+  estado: string;
 }

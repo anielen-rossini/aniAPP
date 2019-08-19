@@ -20,16 +20,18 @@ export class ClienteSalvarComponent implements OnInit {
   cli: Cli = new Cli();
   listaCidade: Observable<Cidade[]>;
 
-  constructor(private afAuth: AngularFireAuth, private banco: AngularFireDatabase, private rota: Router, ){this.listaCidade = this.banco.list<Cidade>('cidade').snapshotChanges().pipe(
-	map( lista => lista.map(linha => ({ key: linha.payload.key, ... linha.payload.val() }))));}
-		
+  constructor(private afAuth: AngularFireAuth, private banco: AngularFireDatabase, private rota: Router, ) {
+this.listaCidade = this.banco.list<Cidade>('cidade').snapshotChanges().pipe(
+    map(lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val() }))));
+  }
+
   ngOnInit() { }
 
   salvar() {
     this.banco.list('cliente').push(this.cliente);
     this.cliente = new Cliente();
-	this.afAuth.auth.createUserWithEmailAndPassword(this.cli.email, this.cli.senha);
+    this.afAuth.auth.createUserWithEmailAndPassword(this.cli.email, this.cli.senha);
     alert("Cadastrado");
-	this.rota.navigate(['home']);
+    this.rota.navigate(['home']);
   }
 }
