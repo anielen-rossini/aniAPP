@@ -1,7 +1,7 @@
 <ion-header>
 	<ion-toolbar>
 		<ion-title>
-			Entrar
+		Entrar
 		</ion-title>
 	</ion-toolbar>
 </ion-header>
@@ -13,6 +13,7 @@
 			<ion-card-title> Login </ion-card-title>
 
 		</ion-card-header>
+	
 		<ion-card-content>
 			Email:
 			<ion-input [(ngModel)]='cli.email'> </ion-input>
@@ -23,23 +24,28 @@
 			<ion-button (click)="logar()"> Entrar </ion-button>
 		</ion-card-content>
 	</ion-card>
-	<br>
+
+<br>
+
 	<ion-card>
 		<ion-card-header>
 			<ion-card-title> Login Estabelecimento</ion-card-title>
 
 		</ion-card-header>
+		
 		<ion-card-content>
 			Email:
-			<ion-input [(ngModel)]='estab.email'> </ion-input>
-			<br>
+		<ion-input [(ngModel)]='estab.email'> </ion-input>
+		<br>
 			Senha:
-			<ion-input [(ngModel)]='estab.senha' type="password"> </ion-input>
-			<br>
-			<ion-button (click)="logarestab()"> Entrar </ion-button>
+		<ion-input [(ngModel)]='estab.senha' type="password"> </ion-input>
+		<br>
+		<ion-button (click)="logarestab()"> Entrar </ion-button>
 		</ion-card-content>
 	</ion-card>
-	<br>
+	
+<br>
+
 	<ion-card>
 		<ion-card-header>
 			<ion-card-title> Cadastre-se: </ion-card-title>
