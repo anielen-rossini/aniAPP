@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'cope', component: ComponenteAcompanhar },
   { path: 'cardapiolista', component: CardapioListarComponent },
   { path: 'establista', component: EstabelecimentoListarComponent },
-  { path: 'pedidolista', component: PedidoListarComponent },
+  { path: 'pedidolista', component: PedidoListarComponent },  { path: 'salvar', loadChildren: './cidade/salvar/salvar.module#SalvarPageModule' },
+
 
 
 

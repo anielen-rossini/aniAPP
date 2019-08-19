@@ -5,4 +5,6 @@ cpf : Number;
 end : String;
 ncasa : Number;
 bairro : String;
+cidade : String;
+estado : String;
 }

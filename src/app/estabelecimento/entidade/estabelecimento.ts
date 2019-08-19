@@ -7,5 +7,7 @@ cnpj : Number;
 end : string;
 nloja : string;
 bairro : string;
+cidade : String;
+estado : String;
 
 }

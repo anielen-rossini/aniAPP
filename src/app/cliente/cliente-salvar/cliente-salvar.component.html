@@ -30,6 +30,24 @@
       <br>
       Bairro <ion-input placeholder=" EXEMPLO: Jd Maria" [(ngModel)]='cliente.bairro'> </ion-input>
       <br>
+	  <ion-item>
+		<ion-label position="floating">Cidade</ion-label>
+			<ion-select [(ngModel)]="cliente.cidade">
+			<ion-select-option *ngFor='let cidade of listaCidade | async' [value]="cidade" >
+				{{cidade.nome}}
+		</ion-select-option>
+		</ion-select>
+</ion-item>
+	  <br>
+	  <ion-item>
+		<ion-label position="floating">Estado</ion-label>
+			<ion-select [(ngModel)]="cliente.estado">
+			<ion-select-option *ngFor='let cidade of listaCidade | async' [value]="estado" >
+				{{cidade.estado}}
+		</ion-select-option>
+		</ion-select>
+</ion-item>
+	  
     </ion-card-content>
   </ion-card>
 
