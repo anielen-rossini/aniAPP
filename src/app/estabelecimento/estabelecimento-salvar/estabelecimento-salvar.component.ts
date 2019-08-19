@@ -11,31 +11,31 @@ import { Cidade } from 'src/app/cidade/entidade/cidade';
 
 
 @Component({
-	selector: 'app-estabelecimento-salvar',
-	templateUrl: './estabelecimento-salvar.component.html',
-	styleUrls: ['./estabelecimento-salvar.component.scss'],
+  selector: 'app-estabelecimento-salvar',
+  templateUrl: './estabelecimento-salvar.component.html',
+  styleUrls: ['./estabelecimento-salvar.component.scss'],
 })
 
 export class EstabelecimentoSalvarComponent implements OnInit {
-	estabelecimento: Estabelecimento = new Estabelecimento();
-	estab: Estab = new Estab();
-	listaCidade: Observable<Cidade[]>;
+  estabelecimento: Estabelecimento = new Estabelecimento();
+  estab: Estab = new Estab();
+  listaCidade: Observable<Cidade[]>;
 
-	constructor(private afAuth: AngularFireAuth, private banco: AngularFireDatabase, private rota: Router, ){
-		this.listaCidade = this.banco.list<Cidade>('cidade').snapshotChanges().pipe(
-		map( lista => lista.map(linha => ({ key: linha.payload.key, ... linha.payload.val() }))));
-  
-}
+  constructor(private afAuth: AngularFireAuth, private banco: AngularFireDatabase, private rota: Router, ) {
+    this.listaCidade = this.banco.list<Cidade>('cidade').snapshotChanges().pipe(
+      map(lista => lista.map(linha => ({ key: linha.payload.key, ...linha.payload.val() }))));
 
-ngOnInit() { }
+  }
 
-estabelecimentoS() {
-	this.banco.list('estabelecimento').push(this.estabelecimento);
-	this.estabelecimento = new Estabelecimento();
-	this.afAuth.auth.createUserWithEmailAndPassword(this.estab.email, this.estab.senha);
-	alert("Loja Salva");
+  ngOnInit() { }
 
-	this.rota.navigate(['cardapioCad']);
-}
+  estabelecimentoS() {
+    this.banco.list('estabelecimento').push(this.estabelecimento);
+    this.estabelecimento = new Estabelecimento();
+    this.afAuth.auth.createUserWithEmailAndPassword(this.estab.email, this.estab.senha);
+    alert("Loja Salva");
+
+    this.rota.navigate(['cardapioCad']);
+  }
 
 }

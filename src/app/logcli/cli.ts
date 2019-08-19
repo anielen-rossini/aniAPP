@@ -1,6 +1,6 @@
 export class Cli {
-	email: string;
-	senha: string;
+  email: string;
+  senha: string;
 
-	
+
 }

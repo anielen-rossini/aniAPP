@@ -34,48 +34,48 @@
       <br>
       Bairro <ion-input placeholder=" EXEMPLO: Jd Maria" [(ngModel)]='estabelecimento.bairro'> </ion-input>
       <br>
-	  
+
     </ion-card-content>
-	
+
   </ion-card>
-  
-	<ion-item>
-		<ion-label position="floating">Cidade</ion-label>
-			<ion-select [(ngModel)]="estabelecimento.cidade">
-			<ion-select-option *ngFor='let cidade of listaCidade | async' [value]="cidade" >
-				{{cidade.nome}}
-		</ion-select-option>
-		</ion-select>
-</ion-item>
-	  <br>
-	  <ion-item>
-		<ion-label position="floating">Estado</ion-label>
-			<ion-select [(ngModel)]="estabelecimento.estado">
-			<ion-select-option *ngFor='let cidade of listaCidade | async' [value]="estado" >
-				{{cidade.estado}}
-		</ion-select-option>
-		</ion-select>
-</ion-item>
-	  
-	  
-	  
-		<ion-button expand="full" color="success" href='salvar'> CADASTRAR CIDADE </ion-button>
-		
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-select [(ngModel)]="estabelecimento.cidade">
+      <ion-select-option *ngFor='let cidade of listaCidade | async' [value]="cidade">
+        {{cidade.nome}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label position="floating">Estado</ion-label>
+    <ion-select [(ngModel)]="estabelecimento.estado">
+      <ion-select-option *ngFor='let cidade of listaCidade | async' [value]="estado">
+        {{cidade.estado}}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+
+  <ion-button expand="full" color="success" href='salvar'> CADASTRAR CIDADE </ion-button>
+
   <ion-card>
     <ion-card-header>
       <ion-card-title>
         Dados de Conta
       </ion-card-title>
     </ion-card-header>
-	
-	
+
+
 
     <ion-card-content>
       Email:
       <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='estab.email'> </ion-input>
       Senha:
       <ion-input type="password" [(ngModel)]='estab.senha'> </ion-input>
-      
+
       <br>
       <ion-button expand="full" color="success" (click)='estabelecimentoS()' href="cardapioCad"> CADASTRAR </ion-button>
 

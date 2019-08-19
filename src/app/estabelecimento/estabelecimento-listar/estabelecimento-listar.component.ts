@@ -16,7 +16,7 @@ export class EstabelecimentoListarComponent implements OnInit {
   listaEstabelecimento: Observable<Estabelecimento[]>;
 
 
-  constructor(private fire: AngularFireDatabase,private afAuth: AngularFireAuth, private router: Router ) {
+  constructor(private fire: AngularFireDatabase, private afAuth: AngularFireAuth, private router: Router) {
     this.listaEstabelecimento = this.fire.list<Estabelecimento>('estabelecimento')
       .snapshotChanges().pipe(
         map(lista => lista.map(linha => ({
@@ -26,11 +26,11 @@ export class EstabelecimentoListarComponent implements OnInit {
   }
 
   ngOnInit() { }
-  
+
   logout() {
-  
+
     this.afAuth.auth.signOut();
-  
+
     this.router.navigate(['home']);
   }
 

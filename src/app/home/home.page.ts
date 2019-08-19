@@ -3,6 +3,7 @@ import { Cli } from 'src/app/logcli/cli';
 import { AngularFireAuth } from "angularfire2/auth";
 import { Router } from '@angular/router';
 import { Estab } from 'src/app/logestab/estab';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +11,12 @@ import { Estab } from 'src/app/logestab/estab';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
- 
+
  cli : Cli = new Cli();
  estab : Estab = new Estab();
- 
+
  constructor(private afAuth: AngularFireAuth, private router: Router) { }
- 
+
  logar(){
 	this.afAuth.auth.signInWithEmailAndPassword(this.cli.email, this.cli.senha).then(
 	() => { this.router.navigate(['establista']); }
