@@ -5,6 +5,7 @@ import { Estabelecimento } from '../entidade/estabelecimento';
 import { map } from 'rxjs/operators';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-estabelecimento-listar',
@@ -12,7 +13,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./estabelecimento-listar.component.scss'],
 })
 export class EstabelecimentoListarComponent implements OnInit {
-
+  listaFiltro: Estabelecimento[];
+  filtro = {};
+  estabelecimentos: any;
+  valor: string;
   listaEstabelecimento: Observable<Estabelecimento[]>;
 
 
@@ -25,7 +29,17 @@ export class EstabelecimentoListarComponent implements OnInit {
       );
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.listaEstabelecimento.subscribe(estabelecimento => {
+        this.estabelecimentos = estabelecimento;
+        this.listaFiltro = _.filter(this.estabelecimentos, _.conforms(this.filtro));
+    })
+  }
+
+  filtrar(){
+    this.filtro['nome'] = val => val.includes(this.valor);
+    this.listaFiltro = _.filter(this.estabelecimentos, _.conforms(this.filtro));
+  }
 
   logout() {
 
