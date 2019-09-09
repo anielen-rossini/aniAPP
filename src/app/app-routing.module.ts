@@ -27,6 +27,7 @@ const routes: Routes = [
   { path: 'establista', component: EstabelecimentoListarComponent },
   { path: 'pedidolista', component: PedidoListarComponent },  { path: 'salvar', loadChildren: './cidade/salvar/salvar.module#SalvarPageModule' },
   { path: 'alter', loadChildren: './home/alter/alter.module#AlterPageModule' },
+  { path: 'alterar-cardapio', loadChildren: './cardapio/alterar-cardapio/alterar-cardapio.module#AlterarCardapioPageModule' },
 
 
 
