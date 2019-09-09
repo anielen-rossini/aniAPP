@@ -37,7 +37,7 @@ export class EstabelecimentoListarComponent implements OnInit {
   }
 
   filtrar(){
-    this.filtro['nome'] = val => val.includes(this.valor);
+    this.filtro['lojanome'] = val => val.includes(this.valor);
     this.listaFiltro = _.filter(this.estabelecimentos, _.conforms(this.filtro));
   }
 
