@@ -6,7 +6,7 @@
 
 <ion-content>
 
-	<ion-card *ngFor="let cardapio of listaCardapio | async">
+	<ion-card *ngFor="let cardapio of listaCard | async">
 		<ion-card-header>
 			<ion-card-title> Itens e Valores: </ion-card-title>
 		</ion-card-header>
@@ -31,12 +31,13 @@
 				<ion-item>
 					<ion-label> Sabores:<br> {{ cardapio.sabor }} </ion-label>
 				</ion-item>
-         <ion-button (click)= "alterar(cardapio)">alterar</ion-button>
+
 			</ion-list>
 			<br>
+
 		</ion-card-content>
 	</ion-card>
-	<ion-button href='pedidolista'> Voltar </ion-button>
+	<ion-button href='establista'> Voltar </ion-button>
 	<br>
 	<br>
 	<br>

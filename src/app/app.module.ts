@@ -24,11 +24,13 @@ import { ComponenteAcompanhar } from './pedido/acompanharPedido/component.acompa
 import { CardapioListarComponent } from './cardapio/cardapio-listar/cardapio-listar.component';
 import { EstabelecimentoListarComponent } from './estabelecimento/estabelecimento-listar/estabelecimento-listar.component';
 import { PedidoListarComponent } from './pedido/pedido-listar/pedido-listar.component';
-import { AlterarCardapioPageModule } from './cardapio/alterar-cardapio/alterar-cardapio.module';
+
+
+
 
 
 @NgModule({
-  declarations: [AppComponent, ClienteSalvarComponent, EstabelecimentoSalvarComponent,AlterarCardapioPageModule,CardapioSalvarComponent, PedidoSalvarComponent, ComponenteAcompanhar, CardapioListarComponent, EstabelecimentoListarComponent, PedidoListarComponent],
+  declarations: [AppComponent, ClienteSalvarComponent, EstabelecimentoSalvarComponent,CardapioSalvarComponent, PedidoSalvarComponent, ComponenteAcompanhar, CardapioListarComponent, EstabelecimentoListarComponent, PedidoListarComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, AngularFireModule.initializeApp({
     apiKey: "AIzaSyDU6bjYzqm7e0l6qst1m7Cybr6Au55-FXI",

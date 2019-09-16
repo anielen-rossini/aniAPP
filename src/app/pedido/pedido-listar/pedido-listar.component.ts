@@ -30,10 +30,7 @@ export class PedidoListarComponent implements OnInit {
     alert("Obrigado por avisar, A saida do produto foi salva");
   }
 
-    alterarcardapio(){
-      this.router.navigate(['alterar-cardapio']);
-
-    }
+    
   logout() {
 
     this.afAuth.auth.signOut();

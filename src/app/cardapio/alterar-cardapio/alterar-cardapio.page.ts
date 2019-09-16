@@ -3,6 +3,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import { Cardapio } from '../entidade/cardapio';
 import { map } from 'rxjs/operators';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-alterar-cardapio',
@@ -11,16 +12,17 @@ import { map } from 'rxjs/operators';
 })
 export class AlterarCardapioPage implements OnInit {
 
-  listaCardapio: Observable<Cardapio[]>;
+    listaCard: Observable<Cardapio[]>;
 
-  constructor(private fire: AngularFireDatabase) {
-    this.listaCardapio = this.fire.list<Cardapio>('cardapio')
-      .snapshotChanges().pipe(
-        map(lista => lista.map(linha => ({
-          key: linha.payload.key, ...linha.payload.val()
-        })))
-      );
-  }
+
+    constructor(private fire: AngularFireDatabase, private modal: ModalController) {
+      this.listaCard = this.fire.list<Cardapio>('cardapio')
+        .snapshotChanges().pipe(
+          map(lista => lista.map(linha => ({
+            key: linha.payload.key, ...linha.payload.val()
+          })))
+        );
+    }
 
   ngOnInit() { }
 
