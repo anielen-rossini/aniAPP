@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Cardapio } from '../entidade/cardapio';
 import { map } from 'rxjs/operators';
 import { ModalController } from '@ionic/angular';
+import { CardapioSalvarComponent } from '../cardapio-salvar/cardapio-salvar.component';
 
 @Component({
   selector: 'app-alterar-cardapio',
@@ -12,19 +13,25 @@ import { ModalController } from '@ionic/angular';
 })
 export class AlterarCardapioPage implements OnInit {
 
-    listaCard: Observable<Cardapio[]>;
+  listaCard: Observable<Cardapio[]>;
 
 
-    constructor(private fire: AngularFireDatabase, private modal: ModalController) {
-      this.listaCard = this.fire.list<Cardapio>('cardapio')
-        .snapshotChanges().pipe(
-          map(lista => lista.map(linha => ({
-            key: linha.payload.key, ...linha.payload.val()
-          })))
-        );
-    }
+  constructor(private fire: AngularFireDatabase, private modal: ModalController) {
+    this.listaCard = this.fire.list<Cardapio>('cardapio')
+      .snapshotChanges().pipe(
+        map(lista => lista.map(linha => ({
+          key: linha.payload.key, ...linha.payload.val()
+        })))
+      );
+  }
 
   ngOnInit() { }
 
+  async alterar(cardapio) {
+    const tela = await this.modal.create({
+      component: CardapioSalvarComponent, componentProps: { cardapio: cardapio }
+    });
+    tela.present();
+  }
 
 }
