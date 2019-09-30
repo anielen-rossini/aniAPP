@@ -17,24 +17,63 @@
 
     <ion-card-content>
       <ion-card-subtitle> Dados de Loja: </ion-card-subtitle>
-      <br>
-      Nome do Dono: <ion-input placeholder=" EXEMPLO: Ana Clara " [(ngModel)]='estabelecimento.nome'> </ion-input>
-      <br>
-      Sobrenome do Dono: <ion-input placeholder=" EXEMPLO: Marinho " [(ngModel)]='estabelecimento.sobrenome'> </ion-input>
-      <br>
-      CPF(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 10514795022" [(ngModel)]='estabelecimento.cpf'> </ion-input>
-      <br>
-      Nome da Loja: <ion-input placeholder=" EXEMPLO: Pão " [(ngModel)]='estabelecimento.lojanome'> </ion-input>
-      <br>
-      CNPJ(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 10514795022" [(ngModel)]='estabelecimento.cnpj'> </ion-input>
-      <br>
-      Endereço da Loja: <ion-input placeholder=" EXEMPLO: Rua Plamares" [(ngModel)]='estabelecimento.end'> </ion-input>
-      <br>
-      Numero(Apenas Numeros): <ion-input placeholder=" EXEMPLO: 598" [(ngModel)]='estabelecimento.nloja'> </ion-input>
-      <br>
-      Bairro <ion-input placeholder=" EXEMPLO: Jd Maria" [(ngModel)]='estabelecimento.bairro'> </ion-input>
-      <br>
+      <form #meuForm='ngForm'>
+        <br>
+        Nome do Dono:
+        <ion-item>
+          <ion-input [(ngModel)]='estabelecimento.nome'> </ion-input>
+        </ion-item>
+        <br>
+        Sobrenome do Dono:
+        <ion-item>
+          <ion-input [(ngModel)]='estabelecimento.sobrenome'> </ion-input>
+        </ion-item>
+        <br>
+        CPF(Apenas Numeros):
+        <ion-item>
+          <ion-input [(ngModel)]='estabelecimento.cpf'> </ion-input>
+        </ion-item>
+        <br>
+        Nome da Loja:
+        <ion-item>
+          <ion-input #lojanome='ngModel' Type='text' [(ngModel)]='estabelecimento.lojanome' name='lojanome' required>
+          </ion-input>
+          <span style='color:red' *ngIf="lojanome.errors && lojanome.touched">
+            <ion-label> campo obrigatório!</ion-label>
+          </span>
 
+        </ion-item>
+        <br>
+        CNPJ(Apenas Numeros):
+        <ion-item>
+          <ion-input #cnpj='ngModel' Type='text' [(ngModel)]='estabelecimento.cnpj' name='cnpj' required></ion-input>
+          <span style='color:red' *ngIf="cnpj.errors && cnpj.touched">
+            <ion-label> campo obrigatório!</ion-label>
+          </span>
+        </ion-item>
+        <br>
+        Endereço da Loja:
+        <ion-item>
+          <ion-input #end='ngModel' Type='text' [(ngModel)]='estabelecimento.end' name='end' required></ion-input>
+          <span style='color:red' *ngIf="end.errors && end.touched">
+            <ion-label> campo obrigatório!</ion-label>
+          </span>
+        </ion-item>
+        <br>
+        Numero(Apenas Numeros):
+        <ion-item>
+            <ion-input #nloja='ngModel' Type='text' [(ngModel)]='estabelecimento.nloja' name='nloja' required></ion-input>
+            <span style='color:red' *ngIf="nloja.errors && nloja.touched">
+              <ion-label> campo obrigatório!</ion-label>
+            </span>
+        </ion-item>
+        <br>
+        Bairro:
+        <ion-item>
+          <ion-input [(ngModel)]='estabelecimento.bairro'> </ion-input>
+        </ion-item>
+        <br>
+      </form>
     </ion-card-content>
 
   </ion-card>
@@ -72,9 +111,18 @@
 
     <ion-card-content>
       Email:
-      <ion-input placeholder=" EXEMPLO: anaclara@email.com" [(ngModel)]='estab.email'> </ion-input>
+      <ion-item>
+        <ion-input #email='ngModel' Type='text' [(ngModel)]='estabelecimento.email' name='email' required></ion-input>
+      </ion-item>
+      <span style='color:red' *ngIf="email.errors && email.touched">
+        <ion-label> campo obrigatório!</ion-label>
+      </span>
+      <br>
+
       Senha:
-      <ion-input type="password" [(ngModel)]='estab.senha'> </ion-input>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]='estab.senha'> </ion-input>
+      </ion-item>
 
       <br>
       <ion-button expand="full" color="success" (click)='estabelecimentoS()' href="cardapioCad"> CADASTRAR </ion-button>
