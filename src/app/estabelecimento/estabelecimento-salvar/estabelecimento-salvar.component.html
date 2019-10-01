@@ -36,6 +36,7 @@
         <br>
         Nome da Loja:
         <ion-item>
+          <ion-label position='floating'>  </ion-label>
           <ion-input #lojanome='ngModel' Type='text' [(ngModel)]='estabelecimento.lojanome' name='lojanome' required>
           </ion-input>
           <span style='color:red' *ngIf="lojanome.errors && lojanome.touched">
@@ -46,6 +47,7 @@
         <br>
         CNPJ(Apenas Numeros):
         <ion-item>
+          <ion-label position='floating'>  </ion-label>
           <ion-input #cnpj='ngModel' Type='text' [(ngModel)]='estabelecimento.cnpj' name='cnpj' required></ion-input>
           <span style='color:red' *ngIf="cnpj.errors && cnpj.touched">
             <ion-label> campo obrigatório!</ion-label>
@@ -54,6 +56,7 @@
         <br>
         Endereço da Loja:
         <ion-item>
+          <ion-label position='floating'>  </ion-label>
           <ion-input #end='ngModel' Type='text' [(ngModel)]='estabelecimento.end' name='end' required></ion-input>
           <span style='color:red' *ngIf="end.errors && end.touched">
             <ion-label> campo obrigatório!</ion-label>
@@ -62,6 +65,7 @@
         <br>
         Numero(Apenas Numeros):
         <ion-item>
+          <ion-label position='floating'>  </ion-label>
             <ion-input #nloja='ngModel' Type='text' [(ngModel)]='estabelecimento.nloja' name='nloja' required></ion-input>
             <span style='color:red' *ngIf="nloja.errors && nloja.touched">
               <ion-label> campo obrigatório!</ion-label>
@@ -112,6 +116,7 @@
     <ion-card-content>
       Email:
       <ion-item>
+        <ion-label position='floating'>  </ion-label>
         <ion-input #email='ngModel' Type='text' [(ngModel)]='estabelecimento.email' name='email' required></ion-input>
       </ion-item>
       <span style='color:red' *ngIf="email.errors && email.touched">
@@ -121,8 +126,13 @@
 
       Senha:
       <ion-item>
-        <ion-input type="password" [(ngModel)]='estab.senha'> </ion-input>
+        <ion-label position='floating'>  </ion-label>
+        <ion-input #senha='ngModel' Type='password' [(ngModel)]='estab.senha' name='senha' required>
+        </ion-input>
       </ion-item>
+      <span style='color:red' *ngIf="senha.errors && senha.touched">
+        <ion-label> campo obrigatório!</ion-label>
+      </span>
 
       <br>
       <ion-button expand="full" color="success" (click)='estabelecimentoS()' href="cardapioCad"> CADASTRAR </ion-button>
